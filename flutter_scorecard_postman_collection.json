@@ -1,0 +1,39 @@
+{
+  "info": {
+    "name": "Flutter Scorecard Submission",
+    "_postman_id": "abcd1234-5678-90ab-cdef-1234567890ab",
+    "description": "Postman collection to simulate station inspection scorecard submission",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Submit Scorecard",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"station\": \"Sample Station\",\n    \"date\": \"2025-07-05\",\n    \"parameters\": [\n        { \"name\": \"Platform Cleanliness\", \"score\": 9, \"remark\": \"Clean and dry\" },\n        { \"name\": \"Urinals Condition\", \"score\": 7, \"remark\": \"Functional but needs cleaning\" },\n        { \"name\": \"Waiting Room Cleanliness\", \"score\": 8, \"remark\": \"\" },\n        { \"name\": \"Drinking Water Booth\", \"score\": 6, \"remark\": \"Leaking tap\" }\n    ]\n}"
+        },
+        "url": {
+          "raw": "https://httpbin.org/post",
+          "protocol": "https",
+          "host": [
+            "httpbin",
+            "org"
+          ],
+          "path": [
+            "post"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
